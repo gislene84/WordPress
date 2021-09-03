@@ -1,4 +1,8 @@
 <footer><!--rodapé-->
+<?php
+    $title = get_the_title();
+    if($title != 'Contato'){
+?>
     <section class="metodologia">
         <div class="center">
             <h2>Conheça nossa metodologia</h2>
@@ -6,6 +10,9 @@
             <a href="/contato">Entrar com o contato</a>
         </div><!--center-->
     </section><!--metodologia-->
+<?php
+    }
+?>
          <div class="center">
             <div class="col-footer">
                 <h2>Suporte</h2>
@@ -27,9 +34,13 @@
             </div><!--col-footer-img-->
          </div><!--center-->  
     </footer>
-
+    <?php
+        wp_footer();
+    ?>
     <script src="<?php echo get_theme_root_uri(); ?>/danki/js/jquery.js"></script>
     <script src="<?php echo get_theme_root_uri(); ?>/danki/js/slick.min.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
+    <script src="<?php echo get_theme_root_uri(); ?>/danki/js/map.js"></script>
     <script type="text/javascript">
 
     $('section.clientes-slider .slider-container').slick({ 
